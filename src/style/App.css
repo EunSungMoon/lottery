@@ -2,6 +2,10 @@
   color: lightblue;
 }
 
+.active {
+  color: red;
+}
+
 body {
   margin: 0;
 }

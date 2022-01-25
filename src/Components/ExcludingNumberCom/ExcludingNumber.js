@@ -2,16 +2,17 @@ import SelectNumber from '../SelectNumberCom/SelectNumber';
 
 export default function ExcludingNumber() {
 
-  let numbers = Array(45);
-  let btns = numbers.fill()
-  btns.forEach(function (btn, index) {
-    btns[index] = index + 1
-  })
-  console.log(btns)
+  let btns = Array(45).fill().map((v, i) => i + 1);
 
   return (
     <>
-      <SelectNumber btns={btns} key={btns} />
+      <div className='selectBtnWrap'>
+        {btns.map(btn => {
+          return (
+            <SelectNumber class={btn} value={btn} key={btn} number={btn} />
+          )
+        })}
+      </div>
     </>
   )
 }
