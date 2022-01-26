@@ -2,9 +2,9 @@ import { useState } from "react"
 export default function SelectNumber(props) {
 
   const [current, setCurrent] = useState(true);
-  
+
   const handleToggle = (e) => {
-    console.log(e.target)
+    console.log(e.target.textContent)
     setCurrent(!current)
   }
 

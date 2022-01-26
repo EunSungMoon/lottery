@@ -5,6 +5,8 @@ import Lottery from '../Components/LotteryCom/Lottery';
 
 export default function MainPage() {
   const [lottery, setLottery] = useState([]);
+  const [clicked, setClicked] = useState('');
+  const [newArray, setNewArray] = useState([])
 
   let btns = Array(45).fill().map((v, i) => i + 1);
   const SETTING = {
@@ -15,7 +17,6 @@ export default function MainPage() {
   const lotto = new Set();
 
   const handleClick = () => {
-
     // 파라미터에서 디스트럭쳐링 할 수도 있음.
     const { count, maxNumber } = SETTING;
 
@@ -25,14 +26,21 @@ export default function MainPage() {
     }
     console.log([...lotto])
     setLottery([...lotto])
-
   }
 
+  const handleChange = (e) => {
+    console.log(e.target)
+    setClicked(e.target.textContent)
+    setNewArray(newArray => [...newArray, clicked])
+    const set = new Set(newArray)
+    const uniqueArr = [...set].slice(1)
+    console.log(uniqueArr)
+  }
 
   return (
     <main>
-      <article>
-        <ExcludingNumber btns={btns} />
+      <article className="exclusion" onClick={handleChange}>
+        <ExcludingNumber btns={btns}/>
       </article>
       <article>
         <RecentNumber />
