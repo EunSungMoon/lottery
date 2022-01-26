@@ -1,8 +1,6 @@
 import SelectNumber from '../SelectNumberCom/SelectNumber';
 
-export default function ExcludingNumber() {
-
-  let btns = Array(45).fill().map((v, i) => i + 1);
+export default function ExcludingNumber({btns}) {
 
   return (
     <>
