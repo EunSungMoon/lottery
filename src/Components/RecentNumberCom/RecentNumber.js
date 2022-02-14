@@ -48,7 +48,7 @@ export default function RecentNumber() {
           <RecentNumberCom test={lottery.n4} />
           <RecentNumberCom test={lottery.n5} />
           <RecentNumberCom test={lottery.n6} />
-          <span>+</span>
+          <span className='bonus'>+</span>
           <RecentNumberCom test={lottery.n7} />
         </div>
       ))}

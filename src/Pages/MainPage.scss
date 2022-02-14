@@ -42,10 +42,23 @@ $white-color: #ffffff;
       }
     }
     .recentLotto {
-      display: flex;
-      align-items: center;
+      @include display(center);
+      background-color: $white-color;
+      border-radius: 20px;
+      padding: 20px;
+      width: 535px;
+      height: 90px;
+      margin: 7.5px;
       p {
         margin: 0;
+        font-size: 25px;
+        color: #d8d8f0;
+        margin-right: 10px;
+      }
+      .bonus{
+        color: #d8d8f0;
+        font-weight: bold;
+        font-size: 25px;
       }
     }
   }
