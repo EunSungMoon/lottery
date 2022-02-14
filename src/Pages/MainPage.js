@@ -1,6 +1,7 @@
 import { useState } from "react"
 import RecentNumber from '../Components/RecentNumberCom/RecentNumber';
 import Lottery from '../Components/LotteryCom/Lottery';
+import './MainPage.scss'
 
 export default function MainPage() {
   const [lottery, setLottery] = useState([]);
@@ -26,13 +27,13 @@ export default function MainPage() {
   }
 
   return (
-    <main>
-      <article>
-        <RecentNumber />
-      </article>
-      <article>
+    <main id='main'>
+      <section>
         <Lottery onclick={handleClick} lottery={lottery} />
-      </article>
+      </section>
+      <section>
+        <RecentNumber />
+      </section>
     </main>
   )
 }

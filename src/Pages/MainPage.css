@@ -1,0 +1,94 @@
+#main .drawNumber {
+  background-color: #bebef0;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+#main .drawNumber .titleWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#main .drawNumber .titleWrap h2 {
+  color: #ffffff;
+  font-size: 33.5px;
+}
+
+#main .drawNumber .lotto-result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+#main .recentWrap {
+  background-color: #d5d5f0;
+  border-radius: 20px;
+  padding: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main .recentWrap .titleWrap h2 {
+  color: #ffffff;
+  font-size: 33.5px;
+}
+
+#main .recentWrap .recentLotto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main .recentWrap .recentLotto p {
+  margin: 0;
+}
+
+#main .ball {
+  padding: 10px;
+  text-align: center;
+  border-radius: 30px;
+  width: 45px;
+  height: 45px;
+  color: #ffffff;
+  margin: 0 4.5px;
+}
+
+#main .yellow {
+  background-color: #ffd400;
+}
+
+#main .blue {
+  background-color: #0c70f2;
+}
+
+#main .black {
+  background-color: #000000;
+}
+
+#main .red {
+  background-color: #be2e22;
+}
+
+#main .green {
+  background-color: #009900;
+}

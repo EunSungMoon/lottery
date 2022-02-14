@@ -1,0 +1,76 @@
+$yellow-color: #ffd400;
+$blue-color: #0c70f2;
+$red-color: #be2e22;
+$black-color: #000000;
+$green-color: #009900;
+$white-color: #ffffff;
+
+@mixin display($effect) {
+  display: flex;
+  align-items: center;
+  justify-content: $effect;
+}
+
+#main {
+  .drawNumber {
+    background-color: #bebef0;
+    padding: 20px;
+    border-radius: 20px;
+    .titleWrap {
+      @include display(space-between);
+      h2 {
+        color: $white-color;
+        font-size: 33.5px;
+      }
+    }
+    .lotto-result {
+      @include display(center);
+      background-color: $white-color;
+      border-radius: 20px;
+      padding: 20px;
+    }
+  }
+  .recentWrap {
+    background-color: #d5d5f0;
+    border-radius: 20px;
+    padding: 20px;
+    justify-content: center;
+    .titleWrap {
+      h2 {
+        color: $white-color;
+        font-size: 33.5px;
+      }
+    }
+    .recentLotto {
+      display: flex;
+      align-items: center;
+      p {
+        margin: 0;
+      }
+    }
+  }
+  .ball {
+    padding: 10px;
+    text-align: center;
+    border-radius: 30px;
+    width: 45px;
+    height: 45px;
+    color: $white-color;
+    margin: 0 4.5px;
+  }
+  .yellow {
+    background-color: $yellow-color;
+  }
+  .blue {
+    background-color: $blue-color;
+  }
+  .black {
+    background-color: $black-color;
+  }
+  .red {
+    background-color: $red-color;
+  }
+  .green {
+    background-color: $green-color;
+  }
+}

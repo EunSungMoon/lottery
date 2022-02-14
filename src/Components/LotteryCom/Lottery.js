@@ -1,16 +1,40 @@
 export default function Lottery(props) {
   return (
-    <div>
-      <button onClick={props.onclick}>번호뽑기</button>
+    <div className="drawNumber">
+      <div className="titleWrap">
+        <h2>당첨번호 추첨하기</h2>
+        <button onClick={props.onclick}>번호뽑기</button>
+      </div>
       <div className="lotto-result">
         {
           props.lottery.map(v => {
-            return (
-              <span className={`${v}lotto`} key={v}>{v}, </span>
-            )
+            switch (true) {
+              case (v < 11):
+                return (
+                  <div className={`yellow ball`} key={v}>{v}</div>
+                );
+              case (v < 21):
+                return (
+                  <div className={`blue ball`} key={v}>{v}</div>
+                );
+              case (v < 31):
+                return (
+                  <div className={`red ball`} key={v}>{v}</div>
+                );
+              case (v < 41):
+                return (
+                  <div className={`black ball`} key={v}>{v}</div>
+                );
+              case (v < 46):
+                return (
+                  <div className={`green ball`} key={v}>{v}</div>
+                );
+              default:
+                break;
+            }
           })
         }
       </div>
-    </div>
+    </div >
   )
 }

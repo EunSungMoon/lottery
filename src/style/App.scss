@@ -1,7 +1,10 @@
 @import "~bootstrap/scss/bootstrap";
-@import '../Components/HeaderCom/Header';
-@import '../Components/SelectNumberCom/SelectNumber';
 
+@font-face {
+  font-family: 'Baeum';
+  src: url('./font/KOHIBaeum.ttf');
+}
 body{
   margin: 0;
+  font-family: 'Baeum';
 }

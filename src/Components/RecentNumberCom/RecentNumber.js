@@ -1,23 +1,23 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import RecentNumberCom from './RecentNumberCom';
 
 export default function RecentNumber() {
-  const [lottery, setLottery] = useState([]);
+  const [lotterys, setLotterys] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   const loadAxios = async () => {
     try {
       setError(null);
-      setLottery(null);
+      setLotterys(null);
       setLoading(true);
-      const loadData = await axios.get('http://15.164.62.156:8000/api/lottery/', {
+      const loadData = await axios.get('http://15.164.62.156:9000/api/lottery/second/', {
         headers: {
           'Content-Type': 'application/json'
         }
       })
-      setLottery(loadData.data)
-      console.log(loadData)
+      setLotterys(loadData.data)
     }
     catch (error) {
       setError(error)
@@ -28,18 +28,31 @@ export default function RecentNumber() {
 
   useEffect(() => {
     loadAxios()
-    return lottery;
+    return lotterys;
   }, []);
   if (loading) return <div>로딩중...</div>
   if (error) return <div>에러가 발생했습니다.</div>
-  if (!lottery) return null;
+  if (!lotterys) return null;
 
   return (
-    <div>
-      <span>{lottery.number}회 로또 번호 확인하기</span>
-      <span>{lottery.date}</span>
+    <div className='recentWrap row'>
+      <div className='titleWrap'>
+        <h2>지난 회차 당첨번호</h2>
+      </div>
+      {lotterys.map(lottery => (
+        <div className='recentLotto col-6' key={lottery.number}>
+          <p>{lottery.number}회</p>
+          <RecentNumberCom test={lottery.n1} />
+          <RecentNumberCom test={lottery.n2} />
+          <RecentNumberCom test={lottery.n3} />
+          <RecentNumberCom test={lottery.n4} />
+          <RecentNumberCom test={lottery.n5} />
+          <RecentNumberCom test={lottery.n6} />
+          <span>+</span>
+          <RecentNumberCom test={lottery.n7} />
+        </div>
+      ))}
       <div>
-        {lottery.n1}, {lottery.n2}, {lottery.n3}, {lottery.n4}, {lottery.n5}, {lottery.n6}, {lottery.n7}
       </div>
     </div>
   )
