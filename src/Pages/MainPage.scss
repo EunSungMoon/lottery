@@ -16,6 +16,7 @@ $white-color: #ffffff;
     background-color: #bebef0;
     padding: 20px;
     border-radius: 20px;
+    margin-bottom: 23px;
     .titleWrap {
       @include display(space-between);
       h2 {
@@ -35,6 +36,7 @@ $white-color: #ffffff;
     border-radius: 20px;
     padding: 20px;
     justify-content: center;
+    --bs-gutter-x:none;
     .titleWrap {
       h2 {
         color: $white-color;
