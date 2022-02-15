@@ -5,7 +5,7 @@ import MainPage from './Pages/MainPage';
 function App() {
   return (
     <div className='App'>
-      <div className='container'>
+      <div className='container-fluid'>
         <Header />
         <MainPage />
       </div>

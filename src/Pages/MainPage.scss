@@ -12,23 +12,38 @@ $white-color: #ffffff;
 }
 
 #main {
+  .margin-20px{
+    margin-top: 20px;
+  }
   .drawNumber {
     background-color: #bebef0;
     padding: 20px;
     border-radius: 20px;
     margin-bottom: 23px;
     .titleWrap {
-      @include display(space-between);
       h2 {
         color: $white-color;
         font-size: 33.5px;
       }
     }
-    .lotto-result {
+    .lotto-resultWrap {
       @include display(center);
+      flex-direction: column;
       background-color: $white-color;
       border-radius: 20px;
       padding: 20px;
+      .lottoBtn {
+        width: 261px;
+        height: 64px;
+        border: none;
+        border-radius: 20px;
+        color: $white-color;
+        background-color: #bebef0;
+        font-size: 25px;
+      }
+      .lotto-result{
+        @include display(center);
+      }
     }
   }
   .recentWrap {
@@ -36,7 +51,7 @@ $white-color: #ffffff;
     border-radius: 20px;
     padding: 20px;
     justify-content: center;
-    --bs-gutter-x:none;
+    --bs-gutter-x: none;
     .titleWrap {
       h2 {
         color: $white-color;
@@ -48,7 +63,7 @@ $white-color: #ffffff;
       background-color: $white-color;
       border-radius: 20px;
       padding: 20px;
-      width: 535px;
+      width: 613px;
       height: 90px;
       margin: 7.5px;
       p {
@@ -57,7 +72,7 @@ $white-color: #ffffff;
         color: #d8d8f0;
         margin-right: 10px;
       }
-      .bonus{
+      .bonus {
         color: #d8d8f0;
         font-weight: bold;
         font-size: 25px;

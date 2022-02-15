@@ -5,7 +5,7 @@ import './MainPage.scss'
 
 export default function MainPage() {
   const [lottery, setLottery] = useState([]);
-
+  const [click, setClick] = useState(false);
 
   let btns = Array(45).fill().map((v, i) => i + 1);
   const SETTING = {
@@ -22,14 +22,14 @@ export default function MainPage() {
       // 0~46이 아니라 실제 로또처럼 1~45가 나오게 끔 함.
       lotto.add(Math.floor(Math.random() * (maxNumber - 1)) + 1);
     }
-    console.log([...lotto])
     setLottery([...lotto])
+    setClick(true)
   }
 
   return (
-    <main id='main'>
+    <main id='main' className="container">
       <section>
-        <Lottery onclick={handleClick} lottery={lottery} />
+        <Lottery onclick={handleClick} lottery={lottery} class={click ? 'margin-20px' : ''} />
       </section>
       <section>
         <RecentNumber />
