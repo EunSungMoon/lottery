@@ -9,7 +9,7 @@ export default function MainPage() {
 
   let btns = Array(45).fill().map((v, i) => i + 1);
   const SETTING = {
-    count: 7,
+    count: 6,
     maxNumber: btns.length,
   };
   const lotto = new Set();

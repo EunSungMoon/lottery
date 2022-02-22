@@ -30,7 +30,7 @@ export default function RecentNumber() {
     loadAxios()
     return lotterys;
   }, []);
-  
+
   if (loading) return <div>로딩중...</div>
   if (error) return <div>에러가 발생했습니다.</div>
   if (!lotterys) return null;
@@ -43,14 +43,16 @@ export default function RecentNumber() {
       {lotterys.map(lottery => (
         <div className='recentLotto col-6' key={lottery.number}>
           <p>{lottery.number}회</p>
-          <RecentNumberCom test={lottery.n1} />
-          <RecentNumberCom test={lottery.n2} />
-          <RecentNumberCom test={lottery.n3} />
-          <RecentNumberCom test={lottery.n4} />
-          <RecentNumberCom test={lottery.n5} />
-          <RecentNumberCom test={lottery.n6} />
-          <span className='bonus'>+</span>
-          <RecentNumberCom test={lottery.n7} />
+          <div className='numberWrap'>
+            <RecentNumberCom test={lottery.n1} />
+            <RecentNumberCom test={lottery.n2} />
+            <RecentNumberCom test={lottery.n3} />
+            <RecentNumberCom test={lottery.n4} />
+            <RecentNumberCom test={lottery.n5} />
+            <RecentNumberCom test={lottery.n6} />
+            <span className='bonus'>+</span>
+            <RecentNumberCom test={lottery.n7} />
+          </div>
         </div>
       ))}
       <div>

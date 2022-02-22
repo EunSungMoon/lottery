@@ -1,3 +1,7 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
 $yellow-color: #ffd400;
 $blue-color: #0c70f2;
 $red-color: #be2e22;
@@ -12,18 +16,17 @@ $white-color: #ffffff;
 }
 
 #main {
-  .margin-20px{
+  margin-bottom: 20px;
+  .margin-20px {
     margin-top: 20px;
   }
   .drawNumber {
     background-color: #bebef0;
-    padding: 20px;
     border-radius: 20px;
     margin-bottom: 23px;
     .titleWrap {
       h2 {
         color: $white-color;
-        font-size: 33.5px;
       }
     }
     .lotto-resultWrap {
@@ -31,17 +34,15 @@ $white-color: #ffffff;
       flex-direction: column;
       background-color: $white-color;
       border-radius: 20px;
-      padding: 20px;
       .lottoBtn {
         width: 261px;
-        height: 64px;
+
         border: none;
         border-radius: 20px;
         color: $white-color;
         background-color: #bebef0;
-        font-size: 25px;
       }
-      .lotto-result{
+      .lotto-result {
         @include display(center);
       }
     }
@@ -49,42 +50,38 @@ $white-color: #ffffff;
   .recentWrap {
     background-color: #d5d5f0;
     border-radius: 20px;
-    padding: 20px;
     justify-content: center;
     --bs-gutter-x: none;
     .titleWrap {
       h2 {
         color: $white-color;
-        font-size: 33.5px;
       }
     }
     .recentLotto {
-      @include display(center);
+      display: flex;
+      justify-content: center;
       background-color: $white-color;
       border-radius: 20px;
-      padding: 20px;
       width: 613px;
-      height: 90px;
       margin: 7.5px;
       p {
         margin: 0;
-        font-size: 25px;
         color: #d8d8f0;
-        margin-right: 10px;
       }
-      .bonus {
-        color: #d8d8f0;
-        font-weight: bold;
-        font-size: 25px;
+      .numberWrap {
+        display: flex;
+        justify-content: center;
+        .bonus {
+          color: #d8d8f0;
+          font-weight: bold;
+          font-size: 25px;
+        }
       }
     }
   }
   .ball {
-    padding: 10px;
     text-align: center;
     border-radius: 30px;
-    width: 45px;
-    height: 45px;
     color: $white-color;
     margin: 0 4.5px;
   }
@@ -102,5 +99,101 @@ $white-color: #ffffff;
   }
   .green {
     background-color: $green-color;
+  }
+}
+
+/**********************************************************
+
+반응형
+
+***********************************************************/
+@media (min-width: 250px) {
+  #main {
+    .ball {
+      width: 32px;
+      height: 32px;
+      font-size: 12px;
+      padding: 8px;
+    }
+    .drawNumber {
+      padding: 15px;
+      .titleWrap {
+        h2 {
+          font-size: 22px;
+        }
+      }
+      .lotto-resultWrap {
+        padding: 15px;
+        .lottoBtn {
+          height: 54px;
+          font-size: 18px;
+        }
+      }
+    }
+    .recentWrap {
+      padding: 15px;
+      .titleWrap {
+        h2 {
+          color: $white-color;
+          font-size: 22px;
+        }
+      }
+      .recentLotto {
+        flex-direction: column;
+        height: 108px;
+        align-items: normal;
+        padding: 10px;
+        p {
+          margin-bottom: 12px;
+          margin-right: 0;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  #main {
+    .ball {
+      width: 45px;
+      height: 45px;
+      padding: 10px;
+      font-size: 18px;
+    }
+    .drawNumber {
+      padding: 20px;
+      .titleWrap {
+        h2 {
+          font-size: 33.5px;
+        }
+      }
+      .lotto-resultWrap {
+        padding: 20px;
+        .lottoBtn {
+          height: 64px;
+          font-size: 25px;
+        }
+      }
+    }
+    .recentWrap {
+      padding: 20px;
+      .titleWrap {
+        h2 {
+          font-size: 33.5px;
+        }
+      }
+      .recentLotto {
+        align-items: center;
+        flex-direction: initial;
+        height: 90px;
+        padding: 20px;
+        p {
+          margin-bottom: 0;
+          margin-right: 10px;
+          font-size: 25px;
+        }
+      }
+    }
   }
 }
