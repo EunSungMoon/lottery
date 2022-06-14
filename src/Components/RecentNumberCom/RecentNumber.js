@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import RecentNumberCom from './RecentNumberCom';
@@ -31,7 +33,6 @@ export default function RecentNumber() {
     return lotterys;
   }, []);
 
-  if (loading) return <div>로딩중...</div>
   if (error) return <div>에러가 발생했습니다.</div>
   if (!lotterys) return null;
 
