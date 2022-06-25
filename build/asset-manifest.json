@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.9c0dced1.css",
-    "main.js": "/static/js/main.d6f655a0.js",
+    "main.css": "/static/css/main.1abe6d96.css",
+    "main.js": "/static/js/main.fea76a96.js",
     "static/js/787.c90eb3c1.chunk.js": "/static/js/787.c90eb3c1.chunk.js",
     "static/media/KOHIBaeum.ttf": "/static/media/KOHIBaeum.c7467426cef68ccdc110.ttf",
     "index.html": "/index.html",
-    "main.9c0dced1.css.map": "/static/css/main.9c0dced1.css.map",
-    "main.d6f655a0.js.map": "/static/js/main.d6f655a0.js.map",
+    "main.1abe6d96.css.map": "/static/css/main.1abe6d96.css.map",
+    "main.fea76a96.js.map": "/static/js/main.fea76a96.js.map",
     "787.c90eb3c1.chunk.js.map": "/static/js/787.c90eb3c1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c0dced1.css",
-    "static/js/main.d6f655a0.js"
+    "static/css/main.1abe6d96.css",
+    "static/js/main.fea76a96.js"
   ]
 }
